@@ -1,0 +1,23 @@
+{
+  "name": "automation-bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "example-test": "npx wdio run wdio.conf.js --spec ./test/specs/example.e2e.js",
+    "hooks-test": "npx wdio run wdio.conf.js --spec ./test/specs/hooks.e2e.js",
+    "element-interaction-test": "npx wdio run wdio.conf.js --spec ./test/specs/elementInteraction.e2e.js"
+  },
+  "author": "Doneil Scotland",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "^7.25.2"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^7.25.2",
+    "@wdio/local-runner": "^7.25.2",
+    "@wdio/mocha-framework": "^7.25.2",
+    "@wdio/selenium-standalone-service": "^7.25.1",
+    "@wdio/spec-reporter": "^7.25.1"
+  }
+}
