@@ -6,7 +6,9 @@
   "scripts": {
     "example-test": "npx wdio run wdio.conf.js --spec ./test/specs/example.e2e.js",
     "hooks-test": "npx wdio run wdio.conf.js --spec ./test/specs/hooks.e2e.js",
-    "element-interaction-test": "npx wdio run wdio.conf.js --spec ./test/specs/elementInteraction.e2e.js"
+    "element-interaction-test": "npx wdio run wdio.conf.js --spec ./test/specs/elementInteraction.e2e.js",
+    "describe-it-test": "npx wdio run wdio.conf.js --spec ./test/specs/describeIt.e2e.js",
+    "assertion-test": "npx wdio run wdio.conf.js --spec ./test/specs/assertions.e2e.js"
   },
   "author": "Doneil Scotland",
   "license": "ISC",
