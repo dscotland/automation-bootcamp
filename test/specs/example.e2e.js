@@ -11,7 +11,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
     });
 
-    it('should attempt to login with invalid credentials', async () => {
+    it.only('should attempt to login with invalid credentials', async () => {
         await LoginPage.open();
 
         await LoginPage.login('invalidUserName', 'invalidPassword');

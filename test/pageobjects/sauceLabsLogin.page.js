@@ -1,22 +1,12 @@
-const Page = require('./page');
-
 /**
- * sub page containing specific selectors and methods for a specific page
+ * page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class SauceLabsLoginPage {
     /**
      * define selectors using getter methods
      */
     get inputUsername () {
-        return $('#username');
-    }
-
-    get usernameText () {
-        return $('em:nth-child(1)');
-    }
-
-    get passwordText () {
-        return $('em:nth-child(2)');
+        return $('#user-name');
     }
 
     get inputPassword () {
@@ -24,11 +14,11 @@ class LoginPage extends Page {
     }
 
     get btnSubmit () {
-        return $('button[type="submit"]');
+        return $('#login-button');
     }
 
-    get loginError () {
-        return $('.flash.error');
+    get loginMessage () {
+        return $('h3[data-test="error"]');
     }
 
 
@@ -46,8 +36,8 @@ class LoginPage extends Page {
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return browser.url(`https://www.saucedemo.com/`);
     }
 }
 
-module.exports = new LoginPage();
+module.exports = new SauceLabsLoginPage();

@@ -14,6 +14,10 @@ class InputsPage extends Page {
         return $('input');
     }
 
+
+    async setNumber (number) {
+        await this.inputField.setValue(number);
+    }
     /**
      * overwrite specific options to adapt it to page object
      */

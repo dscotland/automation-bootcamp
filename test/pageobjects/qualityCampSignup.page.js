@@ -1,22 +1,16 @@
-const Page = require('./page');
-
 /**
- * sub page containing specific selectors and methods for a specific page
+ * page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+ class QualityCampSignUpPage {
     /**
      * define selectors using getter methods
      */
     get inputUsername () {
-        return $('#username');
+        return $('#name');
     }
 
-    get usernameText () {
-        return $('em:nth-child(1)');
-    }
-
-    get passwordText () {
-        return $('em:nth-child(2)');
+    get inputEmail () {
+        return $('#email');
     }
 
     get inputPassword () {
@@ -27,18 +21,15 @@ class LoginPage extends Page {
         return $('button[type="submit"]');
     }
 
-    get loginError () {
-        return $('.flash.error');
-    }
-
 
     /**
      * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * e.g. to signup using username, password and email
      */
-    async login (username, password) {
+    async signup (username, password, email) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
+        await this.inputEmail.setValue(email);
         await this.btnSubmit.click();
     }
 
@@ -46,8 +37,8 @@ class LoginPage extends Page {
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return browser.url(`https://qualitycamp.netlify.app/register/`);
     }
 }
 
-module.exports = new LoginPage();
+module.exports = new QualityCampSignUpPage();

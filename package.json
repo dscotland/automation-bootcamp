@@ -8,18 +8,25 @@
     "hooks-test": "npx wdio run wdio.conf.js --spec ./test/specs/hooks.e2e.js",
     "element-interaction-test": "npx wdio run wdio.conf.js --spec ./test/specs/elementInteraction.e2e.js",
     "describe-it-test": "npx wdio run wdio.conf.js --spec ./test/specs/describeIt.e2e.js",
-    "assertion-test": "npx wdio run wdio.conf.js --spec ./test/specs/assertions.e2e.js"
+    "assertion-test": "npx wdio run wdio.conf.js --spec ./test/specs/assertions.e2e.js",
+    "iframe-test": "npx wdio run wdio.conf.js --spec ./test/specs/iframes.e2e.js",
+    "wait-strategies-test": "npx wdio run wdio.conf.js --spec ./test/specs/waitStrategies.e2e.js",
+    "data-driven-test": "npx wdio run wdio.conf.js --spec ./test/specs/dataDriven.e2e.js",
+    "regression": "npx wdio run wdio.conf.js --spec ./test/specs/regression/**.**.js"
   },
   "author": "Doneil Scotland",
   "license": "ISC",
   "dependencies": {
-    "webdriverio": "^7.25.2"
+    "webdriverio": "^7.25.4"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@wdio/allure-reporter": "^7.26.0",
     "@wdio/cli": "^7.25.2",
     "@wdio/local-runner": "^7.25.2",
     "@wdio/mocha-framework": "^7.25.2",
     "@wdio/selenium-standalone-service": "^7.25.1",
-    "@wdio/spec-reporter": "^7.25.1"
+    "@wdio/spec-reporter": "^7.25.1",
+    "wdio-safaridriver-service": "^2.0.0"
   }
 }

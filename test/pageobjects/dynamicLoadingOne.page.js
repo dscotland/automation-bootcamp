@@ -1,25 +1,28 @@
-
-
 const Page = require('./page');
-
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class CheckboxPage extends Page {
+class DynamicLoadingOnePage extends Page {
     /**
      * define selectors using getter methods
      */
-    get checkbox () {
-        return $('#checkboxes input:nth-child(1)');
+    get startButton () {
+        return $('#start button');
+    }
+
+    get helloWorldHeader() {
+        return $('#finish h4');
     }
 
     /**
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('checkboxes');
+        return super.open('dynamic_loading/1');
     }
 }
 
-module.exports = new CheckboxPage();
+module.exports = new DynamicLoadingOnePage();
+
+
